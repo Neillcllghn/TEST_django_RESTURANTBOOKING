@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather:wght@300&display=swap');
+
+/*-The body and headings were inspired by the love Running Project by CI-*/
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+  }
+
+h1, h2 {
+    font-family: lato, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #252525;
+}

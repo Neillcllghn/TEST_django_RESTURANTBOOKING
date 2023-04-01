@@ -7,6 +7,10 @@ from django.contrib import messages
 
 class BookingDetails(View):
     model = Booking
+    context = {
+        'day': day,
+        'time': time
+    }
 
     def index(request):
-        return render(request, "base.html")
+        return render(request, "bookings.html", context)

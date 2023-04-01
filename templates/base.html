@@ -6,10 +6,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Tablefor2</title>
 </head>
 <body>
     
-    <h1>Hello World</h1>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="{% url 'home' %}" class="brand-logo center">TableFor2</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="{% url 'home' %}">HOME</a></li>
+        <li><a href="#">LOGIN</a></li>
+      </ul>
+    </div>
+  </nav>
+<!-- Need to update this page with allauth later-->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="#">HOME</a></li>
+    <li><a href="#">LOGIN</a></li>
+  </ul>
+
+  <main>
+    {% block content %}
+    <!-- Content Goes here -->
+    {% endblock content %}
+</main>
+
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col 16 s12">
+  <p class="white-text">Made by Code Instituters</p>
+      <p class="grey-text text-lighten-4">Follow us: <i class="fab fa-facebook-square ms-3"></i>
+          <i class="fab fa-twitter-square ms-3"></i>
+          <i class="fab fa-instagram-square ms-3"></i>
+          <i class="fab fa-youtube-square ms-3"></i></p>
+        </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://kit.fontawesome.com/ef22893a52.js" crossorigin="anonymous"></script>
+<script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
