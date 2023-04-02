@@ -44,11 +44,30 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',  # added
+    'allauth',  # added
+    'allauth.account',  # added
+    'allauth.socialaccount',  # added
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
     'booking',  # added
 ]
+
+SITE_ID = 1  # ADDED AND IMPORTANT TO ALLOW DJANGO
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'  # ADDED
+LOGIN_REDIRECT_URL = '/'  # ADDED
+LOGOUT_REDIRECT_URL = '/'  # ADDED
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
