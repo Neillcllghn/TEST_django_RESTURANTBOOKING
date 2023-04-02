@@ -5,12 +5,9 @@ from .models import Booking
 from django.contrib import messages
 
 
-class BookingDetails(View):
+class BookingList(generic.ListView):
     model = Booking
-    context = {
-        'day': day,
-        'time': time
-    }
+    template_name = 'bookings.html'
 
-    def index(request):
-        return render(request, "bookings.html", context)
+    def get_context_data(self, **kwargs):
+        return super().get_context_data(bookings=self.request.user.booking_set.all(), **kwargs)  # noqa

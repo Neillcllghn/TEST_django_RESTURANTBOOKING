@@ -2,11 +2,11 @@
 
 {% block content %}
 
-    <h2>Reservations</h2>
+    <h4>Reservations List</h4>
 
     <ul>
-        {% for bookings in booking %}
-        <li>{{ bookings.day }}</li>
+        {% for booking in user.booking_set.all %}
+        <li>{{ booking }}</li>
         {% endfor %}
     </ul>
 

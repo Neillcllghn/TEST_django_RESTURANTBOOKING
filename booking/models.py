@@ -19,6 +19,7 @@ TIME_CHOICES = (
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     email = models.EmailField(max_length=200, null=True)
+    group_size = models.PositiveIntegerField(null=True)
     day = models.DateField(default=datetime.now)
     time = models.CharField(max_length=10, choices=TIME_CHOICES,
                             default="5:00 PM")
@@ -26,4 +27,4 @@ class Booking(models.Model):
     approved = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"{self.user.username} | day: {self.day} | time: {self.time}"
+        return f'{self.user.username} | Group: {self.group_size} | day: {self.day} | time: {self.time}'  # noqa
