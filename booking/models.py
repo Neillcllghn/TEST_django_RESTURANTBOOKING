@@ -26,5 +26,8 @@ class Booking(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
+    class Meta:
+        ordering = ["day", "-time"]
+
     def __str__(self):
         return f'{self.user.username} | Group: {self.group_size} | day: {self.day} | time: {self.time}'  # noqa

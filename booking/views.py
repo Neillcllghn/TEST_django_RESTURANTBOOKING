@@ -10,4 +10,6 @@ class BookingList(generic.ListView):
     template_name = 'bookings.html'
 
     def get_context_data(self, **kwargs):
-        return super().get_context_data(bookings=self.request.user.booking_set.all(), **kwargs)  # noqa
+        context = super().get_context_data(**kwargs)
+        context['bookings'] = self.request.user.booking_set.all()
+        return context
