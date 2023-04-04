@@ -8,9 +8,8 @@ from django.views.generic.edit import FormView
 from .forms import BookingForm
 
 
-# def index(request):
-# if not request.user.is_authenticated:
-# return HttpResponseRedirect(reverse('home'))
+def index(request):
+    return render(request, "index.html")
 
 
 class BookingList(generic.ListView):
