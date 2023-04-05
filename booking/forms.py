@@ -5,4 +5,8 @@ from django import forms
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ('email', 'group_size', 'day', 'time')
+        fields = ('email', 'group_size', 'day', 'time',)
+
+        # widgets = {
+        #     'day': forms.DateField(default=datetime.now),
+        # }

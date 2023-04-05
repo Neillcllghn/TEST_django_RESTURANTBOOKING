@@ -19,7 +19,7 @@ TIME_CHOICES = (
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     email = models.EmailField(max_length=200, null=True)
-    group_size = models.PositiveIntegerField(null=True)
+    group_size = models.PositiveIntegerField(null=True, default=1)
     day = models.DateField(default=datetime.now)
     time = models.CharField(max_length=10, choices=TIME_CHOICES,
                             default="5:00 PM")

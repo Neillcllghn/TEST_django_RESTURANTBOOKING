@@ -27,3 +27,12 @@ class BookingCreate(FormView):
     template_name = 'create_bookings.html'
     form_class = BookingForm
     success_url = 'booking/'
+
+# this is to vaildate the items added to form
+    def form_valid(self, form):
+        form.save()
+        return super().form_valid(form)
+
+# work in progress
+    def post(self, request, *args, **kwargs):
+        form_class = self.get_form_class()
