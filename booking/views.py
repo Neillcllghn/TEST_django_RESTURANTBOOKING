@@ -28,11 +28,10 @@ class BookingCreate(FormView):
     form_class = BookingForm
     success_url = 'booking/'
 
-# this is to vaildate the items added to form
-    def form_valid(self, form):
-        form.save()
-        return super().form_valid(form)
-
 # work in progress
-    def post(self, request, *args, **kwargs):
-        form_class = self.get_form_class()
+    def register(request):
+        form = form_class(request.POST or None)
+        if request.method == 'POST':
+            if form.is_valid():
+                form.save()
+                return render(request, 'bookings.html', {'form': form})

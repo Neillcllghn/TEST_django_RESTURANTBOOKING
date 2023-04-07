@@ -5,14 +5,14 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 TIME_CHOICES = (
-    ("5:00PM", "5:00PM"),
-    ("5:30PM", "5:30PM"),
-    ("6:00PM", "6:00PM"),
-    ("6:30PM", "6:30PM"),
-    ("7:00PM", "7:00PM"),
-    ("7:30PM", "7:30PM"),
-    ("8:00PM", "8:00PM"),
-    ("8:30PM", "8:30PM")
+    ("17:00", "17:00"),
+    ("17:30", "17:30"),
+    ("18:00", "18:00"),
+    ("18:30", "18:30"),
+    ("19:00", "19:00"),
+    ("19:30", "19:30"),
+    ("20:00", "20:00"),
+    ("20:30", "20:30")
 )
 
 
@@ -21,8 +21,8 @@ class Booking(models.Model):
     email = models.EmailField(max_length=200, null=True)
     group_size = models.PositiveIntegerField(null=True, default=1)
     day = models.DateField(default=datetime.now)
-    time = models.TimeField(max_length=10, choices=TIME_CHOICES,
-                            default="5:00 PM")
+    time = models.TimeField(choices=TIME_CHOICES,
+                            default="17:00")
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
