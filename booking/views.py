@@ -30,8 +30,10 @@ class BookingCreate(FormView):
 
 # work in progress
     def register(request):
-        form = form_class(request.POST or None)
+        form = form_class(data=request.POST)
         if request.method == 'POST':
             if form.is_valid():
                 form.save()
                 return render(request, 'bookings.html', {'form': form})
+            else:
+                form_class = BookingForm()

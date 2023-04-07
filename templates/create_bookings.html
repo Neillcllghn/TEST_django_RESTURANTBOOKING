@@ -9,11 +9,12 @@
       <div class="col-s12-m6">
         <div class="card deep-orange lighten-4">
           <div class="card-content white-text">
-<form method="post">{% csrf_token %}
-  {{ form.as_p }}
+            <p>Username: {{ user.username }}</p>
+              <form method="post">{% csrf_token %}
+                {{ form.as_p }}
 
-  <input type="submit" value="Confirm Booking" class="btn-small submit-button">
-</form>
+              <input type="submit" value="Confirm Booking" class="btn-small submit-button">
+          </form>
         </div>
       </div>
     </div>
