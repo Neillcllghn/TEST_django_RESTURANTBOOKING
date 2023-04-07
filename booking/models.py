@@ -21,8 +21,9 @@ class Booking(models.Model):
     email = models.EmailField(max_length=200, null=True)
     group_size = models.PositiveIntegerField(null=True, default=1)
     day = models.DateField(default=datetime.now)
-    time = models.TimeField(choices=TIME_CHOICES,
+    time = models.CharField(max_length=10, choices=TIME_CHOICES,
                             default="17:00")
+    time_booked = models.TimeField(default=datetime.now, blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
