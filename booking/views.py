@@ -35,7 +35,7 @@ class BookingCreate(CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
-# work in progress
+# do not use
     # def register(request):
     #     form_class = BookingForm(data=request.POST)
     #     if request.method == 'POST':
@@ -44,3 +44,12 @@ class BookingCreate(CreateView):
     #             return render(request, 'bookings.html', {'form': form})
     #         else:
     #             form_class = BookingForm()
+
+
+def update_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+    form = BookingForm(instance=booking)
+    context = {
+        'form': form
+    }
+    return render(request, 'update_bookings.html', context)
