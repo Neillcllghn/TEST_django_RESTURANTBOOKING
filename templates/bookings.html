@@ -4,7 +4,7 @@
 
 <h4 class="center-align">Your Bookings</h4>
     <div class="container">
-    {% for booking in user.booking_set.all %}
+    {% for booking in booking_list %}
     <div class="divider"></div>
     <div class="section">
       <h5><strong>Day:</strong> {{ booking.day }}</h5>
