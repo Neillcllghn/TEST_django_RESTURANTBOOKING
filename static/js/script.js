@@ -1,12 +1,12 @@
+
 let sidenav = document.querySelectorAll('.sidenav');
 M.Sidenav.init(sidenav);
 
-let modals = document.querySelectorAll('.modal');
-M.Modal.init(modals);
+let modal = document.querySelectorAll('.modal');
+M.Modal.init(modal, {
+  opacity:0.9
+});
 
-$(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-  });
 
-  
+let collapsible = document.querySelectorAll('.collapsible');
+M.Collapsible.init(collapsible);

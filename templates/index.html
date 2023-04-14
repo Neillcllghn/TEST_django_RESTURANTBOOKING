@@ -2,7 +2,11 @@
 
 {% block content %}
 
-<h4>Welcome to Tablefor2</h4>
+<div class="container">
+  <div class="row">
+<h2>Welcome to Tablefor2</h2>
+  </div>
+</div>
 
     <div class="col s12 m8 offset-m2 l6 offset-l3">
       <div class="card-panel grey lighten-5 z-depth-1">
@@ -15,14 +19,41 @@
               All you need for a great night and great food is all here!
               Simply signup today and have instance access to our bookings page, in which you can view bookings made,
               edit and or amend bookings or if you can't make, cancel a booking.
-
-              <!--Menu-->
               <!--Times-->
             </span>
           </div>
         </div>
       </div>
     </div>
+
+    <br>
+
+    <div class="col s12 m8 offset-m2 l6 offset-l3"">
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <h4>Our Menu</h4>
+      </div>
+    </div>
+
+    <ul class="collapsible">
+      <li>
+        <div class="collapsible-header">Starter</div>
+        <div class="collapsible-body"><span>Tomato Bruchetta with Bsil, garlic, Balsamic vinegar on Toasted sourdough</span></div>
+        <div class="collapsible-body"><span>Cured Salmon with Prawns, Fresh Salad, Dill Lime and Creme Fraiche</span></div>
+        <div class="collapsible-body"><span>Soup of the Day *Please ask Server*</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header">Main Course</div>
+        <div class="collapsible-body"><span>Truffle Chicken & Potato Gratin</span></div>
+        <div class="collapsible-body"><span>Korean Beef Taco</span></div>
+        <div class="collapsible-body"><span>Mushroom Risotto</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header">Dessert</div>
+        <div class="collapsible-body"><span>Banoffi Pie</span></div>
+        <div class="collapsible-body"><span>Bread & Butter Pudding</span></div>
+        <div class="collapsible-body"><span>Assortment of Ice Cream</span></div>
+      </li>
+    </ul>
 
 
 {%endblock%}
