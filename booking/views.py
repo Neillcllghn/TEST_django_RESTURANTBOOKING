@@ -16,11 +16,6 @@ class BookingList(generic.ListView):
     model = Booking
     template_name = 'bookings.html'
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context['bookings'] = self.request.user.booking_set.all()
-    #     return context
-
     def get_queryset(self):
         return Booking.objects.filter(user=self.request.user)
 
@@ -29,21 +24,18 @@ class BookingCreate(CreateView):
     model = Booking
     template_name = 'create_bookings.html'
     form_class = BookingForm
-    success_url = '/'
+
+    def get_success_url(self):
+        return self.request.path
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        messages.add_message(self.request, messages.INFO,
+                             'Booking was made successfully')
         return super().form_valid(form)
 
-# do not use
-    # def register(request):
-    #     form_class = BookingForm(data=request.POST)
-    #     if request.method == 'POST':
-    #         if form_class.is_valid():
-    #             form_class.save()
-    #             return render(request, 'bookings.html', {'form': form})
-    #         else:
-    #             form_class = BookingForm()
+    def form_invalid(self, form):
+        return super().form_invalid(form)
 
 
 def update_booking(request, booking_id):

@@ -62,13 +62,13 @@
   </ul>
 
   <div class="container">
-  {% for message in messages %}
-    {% if message %}
-      <ul class="messages">
-        <li class="messages {{ message.tag }}">{{ message | safe }}</li>
-      </ul>
-    {% endif %}
-  {% endfor %}
+  {% if messages %}
+    {% for message in messages %}
+        <ul class="messages">
+          <li class="{{ message.tag }}">{{ message | safe }}</li>
+        </ul>
+    {% endfor %}
+  {% endif %}
   </div>
 
   <main>
