@@ -33,3 +33,9 @@ class BookingForm(forms.ModelForm):
             raise ValidationError("You must select today's date "
                                   "or a future date")
         return day
+
+    # def clean_time(self):
+    #     time = self.cleaned_data.get('time')
+    #     if time < time.now():
+    #         raise ValidationError("You must select a time in the future")
+    #     return day
