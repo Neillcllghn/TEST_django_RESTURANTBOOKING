@@ -2,12 +2,6 @@
 
 {% block content %}
 
-<div class="container">
-  <div class="row">
-<h3>Welcome to Tablefor2</h3>
-  </div>
-</div>
-
     <div class="col s12 m8 offset-m2 l6 offset-l3">
       <div class="card-panel grey lighten-5 z-depth-1">
         <div class="row valign-wrapper">
@@ -16,11 +10,45 @@
           </div>
           <div class="col s10">
             <span class="black-text">
-              All you need for a great night and great food is all here!
+              <h3>Welcome to Tablefor2</h3>
+              <p>All you need for a great night and great food is all here!</p>
               <br>
-              Simply signup today and have instance access to our bookings page, in which you can view bookings made,
-              edit and or amend bookings or if you can't make it, cancel a booking.
+              {% if user.is_authenticated %}
+                <p>Please see our times and Menu below.</p>
+                <p>And when you are ready - Please click <a href="{% url 'create_bookings' %}"><strong>here</strong></a> to make a booking.</p>
+              {% else %}
+                <p>Simply <a href="{% url 'account_signup' %}"><strong>Sign Up</strong></a> today and have instance access to our bookings page, in which you can view,
+                  edit and or amend bookings or if you can't make it, cancel a booking.</p>
+                  <br>
+                <p>Please see our Times and Menu below.</p>
+              {% endif %}
             </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    
+    <div class="col s12 m8 offset-m2 l6 offset-l3">
+      <div class="card-panel grey lighten-5 z-depth-1">
+        <h4 class="center">Our Times</h4>
+        <div class="container">
+          <div class="row">
+      <p class="center">When making a booking, the following times are available for our everyday seating:</p>
+          </div>
+        </div>
+        <div class="container center">
+          <div class="row">
+            <div class="col s2">17:00</div>
+            <div class="col s2">17:30</div>
+            <div class="col s2">18:00</div>
+            <div class="col s3">18:30</div>
+            <div class="col s2">19:00</div>
+            <div class="col s2">19:30</div>
+            <div class="col s2">20:00</div>
+            <div class="col s2">20:30</div>
           </div>
         </div>
       </div>
