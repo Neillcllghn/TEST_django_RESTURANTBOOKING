@@ -1,5 +1,6 @@
 from .models import Booking, TIME_CHOICES
 from django import forms
+from django.core.exceptions import ValidationError
 
 
 class BookingForm(forms.ModelForm):

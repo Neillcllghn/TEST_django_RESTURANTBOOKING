@@ -43,6 +43,8 @@ def update_booking(request, booking_id):
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
+            messages.add_message(request, messages.INFO,
+                                 'Booking was updated successfully')
             form.save()
             return redirect('bookings')
     form = BookingForm(instance=booking)
