@@ -40,6 +40,11 @@ class BookingCreate(CreateView):
 
 def update_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('bookings')
     form = BookingForm(instance=booking)
     context = {
         'form': form
