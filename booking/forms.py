@@ -1,6 +1,7 @@
 from .models import Booking, TIME_CHOICES
 from django import forms
 from datetime import date
+from django.utils import timezone
 from django.core.exceptions import ValidationError
 
 
@@ -34,8 +35,8 @@ class BookingForm(forms.ModelForm):
                                   "or a future date")
         return day
 
-    # def clean_time(self):
-    #     time = self.cleaned_data.get('time')
-    #     if time < time.now():
-    #         raise ValidationError("You must select a time in the future")
-    #     return day
+    def clean_time(self):
+        time = self.cleaned_data.get('time')
+        if time < str(timezone.now()):
+            raise ValidationError("You must select a time in the future")
+        return time

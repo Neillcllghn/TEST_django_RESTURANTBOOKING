@@ -35,6 +35,7 @@ class BookingCreate(CreateView):
         return super().form_valid(form)
 
     def form_invalid(self, form):
+        form.add_error(None, 'Ups.....Something went wrong')
         return super().form_invalid(form)
 
 
