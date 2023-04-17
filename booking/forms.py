@@ -43,11 +43,10 @@ class BookingForm(forms.ModelForm):
 
     def clean(self):
         cleaned_data = super(BookingForm, self).clean()
-        email = cleaned_data.get('email')
         day = cleaned_data.get('day')
         time = cleaned_data.get('time')
         try:
-            Booking.objects.get(email=email, day=day, time=time)
+            Booking.objects.get(day=day, time=time)
         except Booking.DoesNotExist:
             return cleaned_data
         else:
