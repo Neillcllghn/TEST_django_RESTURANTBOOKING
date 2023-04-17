@@ -35,20 +35,17 @@ class BookingForm(forms.ModelForm):
                                   "or a future date")
         return day
 
-    def clean_time(self):
-        time = self.cleaned_data.get('time')
-        if time < str(timezone.now()):
-            raise ValidationError("You must select a time in the future")
-        return time
+    # def clean_time(self):
+    #     time = self.cleaned_data.get('time')
+    #     if time < str(timezone.now()):
+    #         raise ValidationError("You must select a time in the future")
+    #     return time
 
     def clean(self):
-        #call the default clean method
         cleaned_data = super(BookingForm, self).clean()
-        #get the diffrents cleanned fields
         email = cleaned_data.get('email')
         day = cleaned_data.get('day')
         time = cleaned_data.get('time')
-        #try to get the book submited by the user from the database
         try:
             Booking.objects.get(email=email, day=day, time=time)
         except Booking.DoesNotExist:

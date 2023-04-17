@@ -10,6 +10,7 @@
       {% if booking.approved %}
         <h5><strong>Day:</strong> {{ booking.day }}</h5>
         <p><strong>Name:</strong> {{ booking.user }}</p>
+        <p><strong>email:</strong> {{ booking.email }}</p>
         <p><strong>No of people:</strong> {{ booking.group_size }}</p>
         <p><strong>Time:</strong> {{ booking.time }}</p>
         <p><strong>Status:</strong> Approved</p>
@@ -17,6 +18,7 @@
           <h5>Booking pending Approval</h5>
           <h5><strong>Day:</strong> {{ booking.day }}</h5>
           <p><strong>Name:</strong> {{ booking.user }}</p>
+          <p><strong>email:</strong> {{ booking.email }}</p>
           <p><strong>No of people:</strong> {{ booking.group_size }}</p>
           <p><strong>Time:</strong> {{ booking.time }}</p>
       {% endif %}
