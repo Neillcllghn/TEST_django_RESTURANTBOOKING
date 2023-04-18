@@ -25,22 +25,20 @@
       <a href="/update/{{ booking.id }}">
         <button class="submit-button btn green accent-4">Edit Booking</button>
       </a>
-      <!--work in process-->
-      <a href="/delete/{{ booking.id }}">
-        <button id="myBtn" class="submit-button btn red">Delete Booking</button>
+      <a href="#modal1-{{ booking.id }}" class="modal-trigger">
+        <button class="submit-button btn red">Delete Booking</button>
       </a>
-
-      <!-- <div id="modal-{{ booking.id }} myModal" class="modal">
+      <div id="modal1-{{ booking.id }}" class="modal">
         <div class="modal-content">
           <h4>Are you sure you want to delete this Booking?</h4>
-          <p>This action cannot be done!</p>
+          <p>This action cannot be undone!</p>
         </div>
         <div class="modal-footer">
           <a href="/delete/{{ booking.id }}" class="btn red">DELETE</a>
           <a href="{% url 'bookings' %}" class="btn green accent-4">CLOSE</a>
         </div>
-      </div> -->
-<!--work in process-->
+      </div>
+
       
     </div>
     {% empty %}
