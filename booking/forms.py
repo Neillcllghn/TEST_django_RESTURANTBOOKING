@@ -45,10 +45,10 @@ class BookingForm(forms.ModelForm):
     def clean(self):
         cleaned_data = super(BookingForm, self).clean()
         day = cleaned_data.get('day')
-        time = cleaned_data.get('time')
         try:
-            Booking.objects.get(day=day, time=time)
+            Booking.objects.get(day=day)
         except Booking.DoesNotExist:
             return cleaned_data
         else:
-            raise ValidationError(('This booking already exists'), code='booking_already_exist')
+            raise ValidationError(('A booking already exists on that day'),
+                                  code='booking_already_exist')
