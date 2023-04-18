@@ -35,20 +35,26 @@ class BookingForm(forms.ModelForm):
                                   "or a future date")
         return day
 
-    # def clean_time(self):
-    #     time = self.cleaned_data.get('time')
-    #     day = cleaned_data.get('day')
-    #     if time < str(timezone.now()) & day = date.today():
-    #         raise ValidationError("You must select a time in the future")
-    #     return time
+# Work in progress
+
+    def clean_future_time_day(self):
+        cleaned_data = super(BookingForm, self).clean()
+        time = cleaned_data.get('time')
+        day = cleaned_data.get('day')
+        if time > str(timezone.now()) and day <= date.today():
+            return cleaned_data
+        else:
+            raise ValidationError("You must select a time in the future")
 
     def clean(self):
         cleaned_data = super(BookingForm, self).clean()
+        email = cleaned_data.get('email')
         day = cleaned_data.get('day')
         try:
-            Booking.objects.get(day=day)
+            Booking.objects.get(email=email, day=day)
         except Booking.DoesNotExist:
             return cleaned_data
         else:
-            raise ValidationError(('A booking already exists on that day'),
+            raise ValidationError(('A booking already exists on that day for '
+                                   'the email used'),
                                   code='booking_already_exist')
