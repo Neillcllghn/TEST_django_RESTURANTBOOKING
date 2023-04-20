@@ -81,3 +81,9 @@ h1, h2 {
   transform: translateX(-10px);
   transition: visibility 0s 250ms, opacity 250ms, transform 250ms;
 }
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+  position: relative;
+  opacity: 1;
+  pointer-events: visible;
+}
