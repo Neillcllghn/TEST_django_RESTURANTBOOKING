@@ -62,4 +62,22 @@ h1, h2 {
   width: 100%;
   text-align: center;
   font-size: 25px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0px);
+  transition: visibility 0s, opacity 250ms, transform 250ms;
+}
+
+
+.messages.hide{
+  padding: 0.5em;
+  color: #fff;
+  background: lightgreen;
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10px);
+  transition: visibility 0s 250ms, opacity 250ms, transform 250ms;
 }
