@@ -1,6 +1,6 @@
 from .models import Booking, TIME_CHOICES
 from django import forms
-from datetime import date, time, datetime
+from datetime import datetime, date, time
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 
@@ -37,19 +37,40 @@ class BookingForm(forms.ModelForm):
 
 # Work in progress
 
+    # def clean_future_time_day(self):
+    #     cleaned_data = super(BookingForm, self).clean()
+    #     time = cleaned_data.get('time')
+    #     day = cleaned_data.get('day')
+    #     if time > str(timezone.now()) and day <= date.today():
+    #         return cleaned_data
+    #     else:
+    #         raise ValidationError("You must select a time in the future")
+
     def clean_future_time_day(self):
         cleaned_data = super(BookingForm, self).clean()
         time = cleaned_data.get('time')
         day = cleaned_data.get('day')
-        if time > str(timezone.now()) and day <= date.today():
-            return cleaned_data
+
+        if day and time:
+            current_date = timezone.localtime(timezone.now()).date()
+            current_time = timezone.localtime(timezone.now()).time()
+
+            if day > current_date:
+                return cleaned_data
+            elif day == current_date and time > str(current_time):
+                return cleaned_data
+            else:
+                raise ValidationError("You must select a time in the future")
         else:
-            raise ValidationError("You must select a time in the future")
+            raise ValidationError("The Time selected is incorrect")
 
     def clean(self):
         cleaned_data = super(BookingForm, self).clean()
         email = cleaned_data.get('email')
         day = cleaned_data.get('day')
+
+        self.clean_future_time_day()
+
         try:
             Booking.objects.get(email=email, day=day)
         except Booking.DoesNotExist:
