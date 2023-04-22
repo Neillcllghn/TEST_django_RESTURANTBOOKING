@@ -71,3 +71,15 @@ The client would like users of the site to register with the site to allow for u
 - I want to be able to edit a booking so that I can make changes if needed and prior to approval.
 - I want to be able to cancel/delete a booking (whether it is pending approval or approved).
 
+
+## Design
+
+### Typography
+
+The Font used is lato & Merriweather which is easy to read and easy on the eye.
+
+I also like to include an image of the fonts chosen as a reference.
+
+## Features
+
+
