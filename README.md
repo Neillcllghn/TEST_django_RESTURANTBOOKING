@@ -138,8 +138,33 @@ The Menu is also displayed to the user regardless of login/Registeration and is 
 
 # Registeration Page
 
-This consist of a 
+This consist of a title, a link to login if you are already have an account, a means to type in a username, and email (optional) and a password.
+
+![image](https://user-images.githubusercontent.com/109948740/234365245-18ba1fd9-f18b-41fd-8415-f60263dac061.png)
 
 
+# Sign in page
+
+This consist of a title, a link to register if you do not have an account, a means to type in your username and password. Furthermore, it has a remember me checkbox just so the user's details will be saved on the system.
+
+![image](https://user-images.githubusercontent.com/109948740/234366047-97a1815b-1afc-4f73-bf4d-5d9669d469a7.png)
+
+# Sign out page
+
+This consist of a title, and a signout button:
+
+![image](https://user-images.githubusercontent.com/109948740/234367296-b3b65089-0f1e-4d30-9602-7b03d3d68902.png)
+
+# Make a Booking Page:
+
+This consists short sentences outlining what the user can and cannot do such as how many guests the user can have, a link to the home page for the user to be reminded of the available times and an additional note that each booking must have an email which will give a booking its uniqueness and so if the user wishes to book on behalf of a friend on the same day as a booking they made, a different email will allow the user to proceed with the booking.
+
+The user will be notifed by error message if the following happens:
+- Double booking - as mentioned above, if the user inputs the same email and selects the same day as a booking that is already made, it will be rejected.
+- Day in the past - if the user selects a day in the past, an error message will appear preventing the user from booking.
+- Time in the past - if the user selects a time in the past, an error message will appear preventing the user from booking.
+- Number of guests - if the user selects more than 6 and less than 1, an error message will appear preventing the user from booking.
+
+![image](https://user-images.githubusercontent.com/109948740/234372929-2c1a2e5a-9591-4fe6-b0a3-699dffc5e865.png)
 
 
