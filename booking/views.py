@@ -7,9 +7,14 @@ from django.http import HttpResponseRedirect
 from django.views.generic.edit import FormView, CreateView
 from .forms import BookingForm
 
+# this is to create an index/home page view
+
 
 def index(request):
     return render(request, "index.html")
+
+
+# This class view allows user to view their bookings in list format.
 
 
 class BookingList(generic.ListView):
@@ -18,6 +23,8 @@ class BookingList(generic.ListView):
 
     def get_queryset(self):
         return Booking.objects.filter(user=self.request.user)
+
+# View to create a booking.
 
 
 class BookingCreate(CreateView):
@@ -38,21 +45,34 @@ class BookingCreate(CreateView):
         form.add_error(None, 'Ups.....Something went wrong')
         return super().form_invalid(form)
 
+# to update a booking
+
 
 def update_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
+            email = form.cleaned_data['email']
+            day = form.cleaned_data['day']
+
+            Booking.objects.filter(email=booking).update(
+                email=email,
+                day=day,
+            ),
             messages.add_message(request, messages.INFO,
                                  'Booking was updated successfully')
             form.save()
             return redirect('bookings')
+        else:
+            print(form.add_error)
     form = BookingForm(instance=booking)
     context = {
         'form': form
     }
     return render(request, 'update_bookings.html', context)
+
+# delete a booking
 
 
 def delete_booking(request, booking_id):
