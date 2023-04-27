@@ -71,6 +71,7 @@ The client would like users of the site to register with the site to allow for u
 - I want to be able to edit a booking so that I can make changes if needed and prior to approval.
 - I want to be able to cancel/delete a booking (whether it is pending approval or approved).
 
+- - -
 
 ## Design
 
@@ -98,6 +99,8 @@ When Button is not highlighted:
 When Button is highlighted:
 
 ![image](https://user-images.githubusercontent.com/109948740/234083620-b09e5077-ac13-4d97-b97c-aac9d73fa55d.png)
+
+- - -
 
 ### General features on each page
 
@@ -135,7 +138,7 @@ The Menu is also displayed to the user regardless of login/Registeration and is 
 
 ![image](https://user-images.githubusercontent.com/109948740/234087288-096b30da-d1b6-483d-a379-b4eb1a8a870e.png)
 
-
+- - -
 
 ### Registeration Page
 
@@ -144,7 +147,7 @@ This consist of a title, a link to login if you are already have an account, a m
 ![image](https://user-images.githubusercontent.com/109948740/234365245-18ba1fd9-f18b-41fd-8415-f60263dac061.png)
 
 
-
+- - -
 
 ### Sign in page
 
@@ -152,7 +155,7 @@ This consist of a title, a link to register if you do not have an account, a mea
 
 ![image](https://user-images.githubusercontent.com/109948740/234366047-97a1815b-1afc-4f73-bf4d-5d9669d469a7.png)
 
-
+- - -
 
 ### Sign out page
 
@@ -160,7 +163,7 @@ This consist of a title, and a signout button:
 
 ![image](https://user-images.githubusercontent.com/109948740/234367296-b3b65089-0f1e-4d30-9602-7b03d3d68902.png)
 
-
+- - -
 
 ### Make a Booking Page:
 
@@ -174,6 +177,7 @@ The user will be notifed by error message if the following happens:
 
 ![image](https://user-images.githubusercontent.com/109948740/234372929-2c1a2e5a-9591-4fe6-b0a3-699dffc5e865.png)
 
+- - -
 
 ### Your Bookings page:
 
@@ -191,6 +195,7 @@ This outlines the bookings the user has made, whether it is pending approval or 
   
   ![image](https://user-images.githubusercontent.com/109948740/234651788-01566b67-81d2-447d-b1bb-54f8933047e8.png)
 
+- - -
 
 ### Update Bookings page:
 
@@ -204,6 +209,7 @@ If the user wishes to update their booking, by clicking on the green EDIT BOOKIN
 
  ![image](https://user-images.githubusercontent.com/109948740/234655294-5ac1cded-aeb5-46b7-b926-c6d93d6a4acb.png)
 
+ - - -
  
 ### Delete Booking function:
 
@@ -212,12 +218,15 @@ The final part to the bookings page is the delete function which is indicated to
 
 ![image](https://user-images.githubusercontent.com/109948740/234656155-f7418fe7-9700-435c-a1df-2d41d724de67.png)
 
+- - -
 
 ### Future Implementations
 
 - Special request textbox for customers/users. Allow users to leave a special reguest with their bookings.
 - Automated email sent to user - use Javascript to issue a automated email (via emailJS) outlining the details of their booking and that it is pending approval, plus an email to be issued to user when booking is approved.
 - A notifcation to be sent to the site admin that there are bookings pending approval.
+
+- - -
 
 ### Accessibility
 
@@ -226,6 +235,7 @@ The final part to the bookings page is the delete function which is indicated to
 - Providing information for screen readers where there are icons used and no text - such as the icons beside each menu section & footer icons.
 - Ensuring that there is a sufficient colour contrast throughout the site.
 
+- - -
 
 ## Technologies Used
 
@@ -252,6 +262,8 @@ Google Dev Tools - To troubleshoot and test features, solve issues with responsi
 
 [ElephantSQL](https://www.elephantsql.com/) - To install and manage PostgreSQL database.
 
+- - -
+
 ## Deployment & Local Development
 
 ### Deployment
@@ -272,6 +284,7 @@ To Deploy the site using Heroku:
 
 The site has now been deployed.
 
+- - -
 
 ### Local Development
 
@@ -293,6 +306,7 @@ To clone the repository:
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
 5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
+- - -
 
 ## Testing
 
@@ -302,6 +316,8 @@ Testing requirements aren't massive for your first project, however if you start
   
 Use this part of the README to link to your TESTING.md file - you can view the example TESTING.md file [here](milestone1-testing.md)
 
+- - -
+
 ## Credits
 
 ## Content:
@@ -310,9 +326,13 @@ Use this part of the README to link to your TESTING.md file - you can view the e
 
 2. The icons in the footer in all pages of the website were taken from [Font Awesome:](https://fontawesome.com/)
 
+- - -
+
 # Media:
 
 - The images of the burger came from [Unsplash:](https://unsplash.com/).
+
+- - -
 
 ###  Acknowledgments
 
