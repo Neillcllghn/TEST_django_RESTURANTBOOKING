@@ -79,8 +79,6 @@ The client would like users of the site to register with the site to allow for u
 
 The Font used is lato & Merriweather which is easy to read and easy on the eye.
 
-I also like to include an image of the fonts chosen as a reference.
-
 ## Features
 
 The website is comprised of a home page, login, register and sign out pages, a booking page, an update bookings page and a Your Bookings page.
@@ -128,7 +126,7 @@ Another feature to notify that the user is signed in or not is the Nav-bar will 
   ![image](https://user-images.githubusercontent.com/109948740/234086102-31519ca7-2e85-4294-81de-64774032ab85.png)
 
 
-The Times portion of the home page (this is displayed to the user, whether they are logged in or not):
+The Times portion of the home page (this is displayed to the user, whether they are logged in or not) and all times are based on GMT, which means that users will need to take into account the time difference if located in a different timezone:
 
 ![image](https://user-images.githubusercontent.com/109948740/234086515-004fe18f-fe1a-48d4-91af-799e131a23fa.png)
 
@@ -310,11 +308,7 @@ To clone the repository:
 
 ## Testing
 
-Start as you mean to go on - and get used to writing a TESTING.md file from the very first project!
-
-Testing requirements aren't massive for your first project, however if you start using a TESTING.md file from your first project you will thank yourself later when completing your later projects, which will contain much more information.
-  
-Use this part of the README to link to your TESTING.md file - you can view the example TESTING.md file [here](milestone1-testing.md)
+Please see [TESTING.md](https://github.com/Neillcllghn/TEST_django_RESTURANTBOOKING/blob/main/TESTING.md) for all testing performed
 
 - - -
 
