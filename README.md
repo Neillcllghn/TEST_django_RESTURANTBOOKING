@@ -304,6 +304,16 @@ Use this part of the README to link to your TESTING.md file - you can view the e
 
 ## Credits
 
+## Content:
+
+1. The sign-up submit button was inspired by a Youtube video titled: [CSS Button Hover Animation Effects using Only HTML & CSS](https://www.youtube.com/watch?v=zPcvAwp71uA)
+
+2. The icons in the footer in all pages of the website were taken from [Font Awesome:](https://fontawesome.com/)
+
+# Media:
+
+- The images of the burger came from [Unsplash:](https://unsplash.com/).
+
 ###  Acknowledgments
 
 If someone helped you out during your project, you can acknowledge them here! For example someone may have taken the time to help you on slack with a problem. Pop a little thank you here with a note of what they helped you with (I like to try and link back to their GitHub or Linked In account too). This is also a great place to thank your mentor and tutor support if you used them.
