@@ -75,9 +75,52 @@ The client would like users of the site to register with the site to allow for u
 
 ## Design
 
+### Colour Scheme
+
+Colour scheme used was adopted from the [Materialize CSS](https://materializecss.com/). Images from [Color Hex](https://www.color-hex.com/)
+
+- Used for the Navbar:
+
+ ![image](https://user-images.githubusercontent.com/109948740/235197870-22302e5a-cd6d-4911-a406-bc10791bc723.png)
+
+
+- Used for the menu background (To contrast from the rest of the Home Page):
+
+ ![image](https://user-images.githubusercontent.com/109948740/235199057-ca1d4abe-dfe2-4652-8e1d-6e98fc96a64c.png)
+ 
+
+- Used within the menu - to contrast the color of the food items from the white collapsible headers of Starter, Main Course and Dessert:
+
+ ![image](https://user-images.githubusercontent.com/109948740/235199820-9f1c12fd-bf89-4916-8ae7-af15c41b8907.png)
+ 
+ 
+ - Used for the Booking Pages Form:
+ 
+ ![image](https://user-images.githubusercontent.com/109948740/235201743-aac969b4-2d6b-49ce-ad8a-225dbe607ebe.png)
+
+
+- The Edit and Delete Buttons are green (to notify user that this is to edit) and red (which is suitable warning user that this is a delete button):
+
+ ![image](https://user-images.githubusercontent.com/109948740/235202126-e60a079d-5a47-452a-96f8-72df5c946376.png)
+
+ ![image](https://user-images.githubusercontent.com/109948740/235202290-d65ad13e-a048-4b8a-8670-f88ba62d4e7d.png)
+
+
+- - -
+
 ### Typography
 
 The Font used is lato & Merriweather which is easy to read and easy on the eye.
+
+- - -
+
+### Imagery
+
+- - -
+
+### Wireframes
+
+- - -
 
 ## Features
 
